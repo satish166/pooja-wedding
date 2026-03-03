@@ -1,0 +1,47 @@
+@use './variables' as *;
+@use './mixin' as *;
+
+.button {
+    @include button;
+
+    &-primary {
+        @include button(primary);
+    }
+    &-outline-primary {
+        @include button(outline-primary);
+    }
+}
+
+
+
+.primary-heading {
+    font-size: 60px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: $primary;
+    font-family: "Sacramento";
+     @include media-breakpoint-down-lg {
+                 font-size: 40px;
+                 }
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.animate-scale {
+    animation: animateScale 2s infinite;
+    overflow: hidden;
+    @keyframes animateScale {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}

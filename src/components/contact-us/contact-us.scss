@@ -1,0 +1,110 @@
+@use '../../styles/components/variables' as *;
+@use '../../styles/components/mixin' as *;
+
+
+.contact-us {
+    .main-banner {
+        position: relative;
+        background-image: url(../../assets/images/img_bg_4.jpg);
+        height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: 100%;
+        background-position: center center;
+
+        @include media-breakpoint-down-md {
+            height: 400px;
+        }
+
+        &::before {
+            content: "";
+            z-index: 0;
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgb(0 0 0 / 65%);
+        }
+
+        .banner-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            position: relative;
+            color: $white;
+            z-index: 2;
+            text-align: center;
+
+            .names {
+                margin-bottom: 0px;
+                font-size: 100px;
+                line-height: 1.5;
+                color: $white;
+                font-family: "Sacramento";
+
+                @include media-breakpoint-down-md {
+                    font-size: 50px;
+                }
+            }
+
+            h6 {
+                color: $white;
+                font-size: 20px;
+                line-height: 1.5;
+                margin-bottom: 30px;
+
+                @include media-breakpoint-down-md {
+                    font-size: 16px;
+                }
+            }
+
+        }
+    }
+
+    .contact-details {
+        padding-block: 50px;
+
+        .address {
+
+            h5 {
+                font-size: 30px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin-top: 50px;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 40px;
+                          @include media-breakpoint-down-md {
+                            font-size: 20px;
+                        }
+                    }
+
+                    svg {
+                        font-size: 20px;
+                        color: $primary;
+                    }
+
+                    p {
+                        font-size: 20px;
+                        line-height: normal;
+
+                        @include media-breakpoint-down-md {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

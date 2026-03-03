@@ -1,0 +1,9 @@
+@use '../../styles/components/variables' as *;
+@use '../../styles/components/mixin' as *;
+
+.not-found {
+   display: flex;
+   align-items: center;
+   height: 100vh;
+   justify-content: center;
+}

@@ -1,0 +1,57 @@
+@use './variables' as *;
+@use './mixin' as *;
+
+input {
+
+    &[type="text"],
+    &[type="number"],
+    &[type="search"],
+    &[type="email"],
+    &[type="password"],
+    &[type="tel"] {
+        height: 54px;
+        font-size: 16px;
+        font-weight: 400;
+        border: 1px solid $gray2;
+        padding-left: 10px;
+        border-radius: 5px;
+
+        @include media-breakpoint-down-xxl {
+            height: 43px;
+            font-size: 11px;
+        }
+
+        &::placeholder {
+            color: $gray2;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: $primary;
+        }
+    }
+}
+
+label {
+    font-size: 12px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid $gray2;
+    font-size: 16px;
+    padding: 10px;
+    min-height: 80px;
+    max-height: 150px;
+
+    &::placeholder {
+        color: $gray2;
+    }
+
+    &:focus {
+        outline: 0;
+        border-color: $gray2;
+    }
+}
