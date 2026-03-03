@@ -1,0 +1,55 @@
+@use '../../styles/components/variables' as *;
+@use '../../styles/components/mixin' as *;
+
+
+.header {
+    padding: 20px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+
+    @include media-breakpoint-down-md {
+        background-color: rgb(0 0 0 / 74%);
+        padding: 0px;
+    }
+
+    .navbar {
+        background-color: transparent;
+
+        .navbar-brand {
+            font-family: "Sacramento";
+            color: $white;
+            font-size: 40px;
+
+            @include media-breakpoint-down-md {
+                font-size: 30px;
+            }
+        }
+
+        .navbar-toggler {
+            background-color: $white;
+        }
+
+        .navbar-nav {
+            gap: 10px;
+
+            .nav-item {
+                .nav-link {
+                    color: $gray;
+                    text-transform: uppercase;
+                    font-size: 13px;
+
+                    &:hover {
+                        color: $white;
+                    }
+
+                    &.active {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

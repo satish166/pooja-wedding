@@ -1,0 +1,43 @@
+/* global.scss (or a module file) */
+.std-countdown {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  color: #fff;
+}
+
+.std-circles {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.std-circle {
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  background: #d81b60; /* pink-600 */
+  display: grid;
+  place-items: center;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+}
+
+.std-value {
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.std-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  opacity: 0.95;
+}
+
+.std-date {
+  font-size: 14px;
+  opacity: 0.95;
+  text-align: center;
+}

@@ -1,0 +1,28 @@
+@use '../../styles/components/variables' as *;
+@use '../../styles/components/mixin' as *;
+
+
+.footer {
+    padding-block: 30px;
+    text-align: center;
+    background-color: $gray2;
+    background-image: url(../../assets/images/img_bg_3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.425);
+    }
+    p, h5{
+        color: $white;
+        position: relative;
+        z-index: 1;
+    }
+}
